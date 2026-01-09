@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "SharePic Telegrm",
+    "version": "1.0.0",
+    "description": "Send Photos to Telegram Web directly from the Chrome",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "hosting_permissions": [
+        "https://web.telegram.org/*"
+    ],
+    "content_scripts": [{
+        "matches": ["https://web.telegram.org/*"],
+        "js": ["content_script.js"]
+    }],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
