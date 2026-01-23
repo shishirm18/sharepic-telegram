@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Photo Uploader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📸 Telegram Photo Uploader</h1>
+      <p class="subtitle">Send photos to your Telegram chat</p>
+    </div>
+
+    <div class="content">
+      <!-- File Input Section -->
+      <div class="file-input-wrapper">
+        <input 
+          type="file" 
+          id="fileInput" 
+          accept="image/*"
+          class="file-input"
+        >
+        <label for="fileInput" class="file-label">
+          <span class="file-icon">📁</span>
+          <span id="fileName">Choose an image</span>
+        </label>
+      </div>
+
+      <!-- Preview Section -->
+      <div id="previewContainer" class="preview-container hidden">
+        <img id="imagePreview" class="image-preview" alt="Preview">
+        <button id="removeImage" class="remove-btn" title="Remove image">×</button>
+      </div>
+
+      <!-- Action Buttons -->
+      <button id="sendButton" class="send-button" disabled>
+        <span class="button-text">Send to Telegram</span>
+        <span class="button-icon">🚀</span>
+      </button>
+
+      <!-- Status Messages -->
+      <div id="statusContainer" class="status-container hidden">
+        <div id="statusMessage" class="status-message"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="info-text">Make sure you're on a Telegram chat page</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
